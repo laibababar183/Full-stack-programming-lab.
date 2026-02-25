@@ -1,0 +1,15 @@
+body {
+    font-family: Arial;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+h2 {
+    color: darkblue;
+}
+
+#students {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+}
