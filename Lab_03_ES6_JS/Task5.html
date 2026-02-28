@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task5 - Product Catalog using Map</title>
+  <link rel="stylesheet" href="Task5.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="map-icon">M</div>
+      <div>
+        <h1>Product Catalog</h1>
+        <p>Map &bull; Key=Product ID &bull; Value=Product Object &bull; .get() .set() .delete() .size</p>
+      </div>
+      <div class="badge">TASK 05</div>
+    </div>
+  </header>
+
+  <main>
+    <div class="card">
+      <div class="card-label">ADD PRODUCT TO MAP</div>
+      <div class="form-4col">
+        <input type="text" id="p-id"       placeholder="Product ID (e.g. P006)"/>
+        <input type="text" id="p-name"     placeholder="Product Name"/>
+        <input type="number" id="p-price"  placeholder="Price (USD)" step="0.01"/>
+        <input type="text" id="p-category" placeholder="Category"/>
+      </div>
+      <button class="btn-add" onclick="addProduct()">Add to Map</button>
+    </div>
+
+    <div class="top-row">
+      <div class="card search-card">
+        <div class="card-label">SEARCH BY ID</div>
+        <div class="search-row">
+          <input type="text" id="search-id" placeholder="e.g. P001"/>
+          <button class="btn-search" onclick="searchProduct()">Search</button>
+        </div>
+        <div id="search-result"></div>
+      </div>
+      <div class="stat-bubble">
+        <div class="stat-num" id="map-size">5</div>
+        <div class="stat-lbl">Products<br/>in Map</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">MAP CONTENTS — <small>Key → Value pairs</small></div>
+      <table class="product-table">
+        <thead>
+          <tr><th>MAP KEY (ID)</th><th>PRODUCT NAME</th><th>PRICE</th><th>CATEGORY</th><th>ACTION</th></tr>
+        </thead>
+        <tbody id="product-tbody"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer>Lab Task 05 &mdash; Map &bull; Key=Product ID &bull; .get() .set() .delete() .size .forEach()</footer>
+  <script src="Task5.js"></script>
+</body>
+</html>

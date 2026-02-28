@@ -1,0 +1,95 @@
+/* Task 6 — Indigo / Modern Dashboard Theme */
+:root{
+  --bg:#f1f5f9;--white:#fff;--border:#e2e8f0;
+  --indigo:#4f46e5;--teal:#0d9488;--emerald:#059669;
+  --text:#0f172a;--muted:#94a3b8;--red:#ef4444;--green:#22c55e;
+  --font:'Plus Jakarta Sans',sans-serif;--mono:'Fira Code',monospace;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:100vh;}
+header{
+  background:linear-gradient(135deg,#1e1b4b,#312e81);
+  padding:1.5rem 2.5rem;position:relative;
+}
+header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--indigo),var(--teal),var(--emerald));}
+.header-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:1.25rem;}
+.portal-logo{
+  width:48px;height:48px;border-radius:12px;
+  background:linear-gradient(135deg,var(--indigo),var(--teal));
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--mono);font-size:1.3rem;font-weight:700;color:#fff;
+  box-shadow:0 4px 12px rgba(79,70,229,.4);flex-shrink:0;
+}
+header h1{font-family:var(--font);font-size:1.55rem;font-weight:800;color:#fff;}
+header p{font-size:.7rem;color:#a5b4fc;margin-top:3px;}
+.badge{margin-left:auto;font-family:var(--mono);font-size:.78rem;border:1px solid #4338ca;padding:.35rem 1rem;border-radius:4px;color:#a5b4fc;}
+main{max-width:1100px;margin:0 auto;padding:2rem;}
+.two-panel{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:1.25rem;}
+.card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:1.75rem;box-shadow:0 1px 3px rgba(0,0,0,.06);}
+.card-label{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;color:var(--muted);text-transform:uppercase;margin-bottom:1.1rem;}
+.inp{
+  display:block;width:100%;
+  background:#f8fafc;border:1.5px solid var(--border);
+  border-radius:8px;padding:.72rem 1rem;font-family:var(--font);
+  font-size:.9rem;color:var(--text);outline:none;
+  transition:border-color .2s,box-shadow .2s;margin-bottom:.75rem;
+}
+.inp:focus{border-color:var(--indigo);box-shadow:0 0 0 3px rgba(79,70,229,.1);}
+.inp::placeholder{color:var(--muted);}
+.btn-enroll,.btn-register{
+  background:linear-gradient(135deg,var(--indigo),#6366f1);
+  color:#fff;border:none;border-radius:8px;
+  padding:.72rem 1.5rem;font-family:var(--font);font-size:.88rem;font-weight:600;
+  cursor:pointer;transition:opacity .2s,transform .15s;
+  box-shadow:0 3px 10px rgba(79,70,229,.3);
+}
+.btn-enroll:hover,.btn-register:hover{opacity:.88;transform:translateY(-1px);}
+.btn-row-2{display:flex;gap:.75rem;flex-wrap:wrap;}
+.btn-save{
+  background:linear-gradient(135deg,var(--teal),var(--emerald));
+  color:#fff;border:none;border-radius:8px;
+  padding:.72rem 1.25rem;font-family:var(--font);font-size:.85rem;font-weight:600;
+  cursor:pointer;transition:opacity .2s,transform .15s;
+}
+.btn-save:hover{opacity:.88;transform:translateY(-1px);}
+.stats-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-bottom:1.25rem;}
+.s-card{border-radius:14px;padding:1.5rem;display:flex;align-items:center;gap:1rem;box-shadow:0 4px 12px rgba(0,0,0,.1);}
+.s-card.indigo {background:linear-gradient(135deg,var(--indigo),#818cf8);color:#fff;}
+.s-card.teal   {background:linear-gradient(135deg,var(--teal),#2dd4bf);  color:#fff;}
+.s-card.emerald{background:linear-gradient(135deg,var(--emerald),#34d399);color:#fff;}
+.s-num{font-family:var(--mono);font-size:2.8rem;font-weight:700;line-height:1;}
+.s-lbl{font-size:.75rem;font-weight:600;letter-spacing:.04em;line-height:1.6;}
+.s-lbl small{font-weight:400;opacity:.8;font-size:.68rem;}
+/* Student & Course items */
+.stu-item{
+  display:flex;align-items:flex-start;gap:.75rem;
+  padding:.75rem 0;border-bottom:1px solid var(--border);
+}
+.stu-item:last-child{border-bottom:none;}
+.stu-avatar{
+  width:36px;height:36px;border-radius:50%;flex-shrink:0;
+  background:linear-gradient(135deg,var(--indigo),var(--teal));
+  display:flex;align-items:center;justify-content:center;
+  font-size:.9rem;font-weight:700;color:#fff;
+}
+.stu-info{}
+.stu-name{font-weight:600;font-size:.9rem;}
+.stu-meta{font-size:.75rem;color:var(--muted);margin:2px 0;}
+.stu-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:5px;}
+.stu-tag{font-size:.7rem;background:#eff6ff;border:1px solid #bfdbfe;color:#3b82f6;padding:2px 8px;border-radius:4px;}
+.crs-item{
+  display:flex;align-items:center;gap:.5rem;
+  padding:.5rem 0;border-bottom:1px solid var(--border);font-size:.9rem;
+}
+.crs-item:last-child{border-bottom:none;}
+.crs-dot{width:8px;height:8px;border-radius:50%;background:var(--teal);flex-shrink:0;}
+.crs-idx{font-family:var(--mono);font-size:.7rem;color:var(--muted);min-width:24px;}
+.empty{color:var(--muted);font-size:.85rem;font-style:italic;padding:.5rem 0;}
+.promise-card{background:#0f172a;border-color:#1e293b;}
+.promise-card .card-label{color:#475569;}
+.p-log{max-height:110px;overflow-y:auto;}
+.plog-ok  {font-family:var(--mono);font-size:.75rem;color:#4ade80;padding:2px 0;}
+.plog-err {font-family:var(--mono);font-size:.75rem;color:#f87171;padding:2px 0;}
+.plog-info{font-family:var(--mono);font-size:.75rem;color:#475569;padding:2px 0;}
+footer{border-top:1px solid var(--border);text-align:center;padding:1.2rem;font-size:.75rem;color:var(--muted);font-style:italic;}
+@media(max-width:700px){.two-panel,.stats-3{grid-template-columns:1fr;}header{padding:1.2rem;}}

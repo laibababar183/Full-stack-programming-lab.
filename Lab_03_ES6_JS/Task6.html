@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task6 - Mini University Portal</title>
+  <link rel="stylesheet" href="Task6.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="portal-logo">U</div>
+      <div>
+        <h1>Mini University Portal</h1>
+        <p>Class &bull; Map &bull; Set &bull; Promise — Combined System</p>
+      </div>
+      <div class="badge">TASK 06</div>
+    </div>
+  </header>
+
+  <main>
+    <div class="two-panel">
+      <!-- Enroll Student -->
+      <div class="card">
+        <div class="card-label">CLASS + MAP — Enroll Student</div>
+        <input type="text" id="stu-name" placeholder="Student name" class="inp"/>
+        <input type="text" id="stu-courses" placeholder="Courses (comma-separated)" class="inp"/>
+        <button class="btn-enroll" onclick="enrollStudent()">Enroll &rarr;</button>
+      </div>
+      <!-- Register Course -->
+      <div class="card">
+        <div class="card-label">SET — Register Course</div>
+        <input type="text" id="crs-name" placeholder="Course name" class="inp"/>
+        <div class="btn-row-2">
+          <button class="btn-register" onclick="registerCourse()">Register &rarr;</button>
+          <button class="btn-save" onclick="saveData()">Save to DB (Promise)</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-3">
+      <div class="s-card indigo">
+        <div class="s-num" id="stu-count">0</div>
+        <div class="s-lbl">Enrolled Students<br/><small>Map.size</small></div>
+      </div>
+      <div class="s-card teal">
+        <div class="s-num" id="crs-count">0</div>
+        <div class="s-lbl">Unique Courses<br/><small>Set.size</small></div>
+      </div>
+      <div class="s-card emerald">
+        <div class="s-num" id="save-count">0</div>
+        <div class="s-lbl">Successful Saves<br/><small>Promise.resolve</small></div>
+      </div>
+    </div>
+
+    <!-- Display -->
+    <div class="two-panel">
+      <div class="card">
+        <div class="card-label">STUDENTS — Map&lt;id, Student&gt;</div>
+        <div id="stu-list"><p class="empty">No students enrolled yet.</p></div>
+      </div>
+      <div class="card">
+        <div class="card-label">COURSES — Set&lt;string&gt;</div>
+        <div id="crs-list"><p class="empty">No courses registered yet.</p></div>
+      </div>
+    </div>
+
+    <!-- Promise log -->
+    <div class="card promise-card">
+      <div class="card-label">PROMISE LOG</div>
+      <div id="promise-log" class="p-log">
+        <div class="plog-info">&bull; System ready.</div>
+      </div>
+    </div>
+  </main>
+
+  <footer>Lab Task 06 &mdash; Class &bull; Map &bull; Set &bull; Promise — Combined System</footer>
+  <script src="Task6.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task4 - Course Registration System</title>
+  <link rel="stylesheet" href="Task4.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="set-badges"><span class="sb s">S</span><span class="sb e">E</span><span class="sb t">T</span></div>
+      <div>
+        <h1>Course Registration System</h1>
+        <p>Set &bull; No Duplicates &bull; .size &bull; for...of loop</p>
+      </div>
+      <div class="badge">TASK 04</div>
+    </div>
+  </header>
+
+  <main>
+    <div class="card">
+      <div class="card-label">REGISTER A COURSE</div>
+      <div class="input-row">
+        <input type="text" id="course-input" placeholder="Enter course name..."
+               onkeydown="if(event.key==='Enter') registerCourse()"/>
+        <button class="btn-reg" onclick="registerCourse()">REGISTER</button>
+      </div>
+      <div class="btn-row">
+        <button class="btn-sm btn-blue"   onclick="loadSamples()">LOAD SAMPLES</button>
+        <button class="btn-sm btn-yellow" onclick="tryDuplicate()">TRY DUPLICATE</button>
+        <button class="btn-sm btn-red"    onclick="clearAll()">CLEAR ALL</button>
+      </div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-card pink">
+        <div class="stat-num" id="uniqueCount">0</div>
+        <div class="stat-lbl">UNIQUE COURSES<br/><small>(.size)</small></div>
+      </div>
+      <div class="stat-card blue">
+        <div class="stat-num" id="totalAttempts">0</div>
+        <div class="stat-lbl">TOTAL<br/>ATTEMPTS</div>
+      </div>
+      <div class="stat-card yellow">
+        <div class="stat-num" id="dupBlocked">0</div>
+        <div class="stat-lbl">DUPLICATES<br/>BLOCKED</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">REGISTERED COURSES <small>(iterated with for...of loop)</small></div>
+      <div id="courses-list"><p class="empty">No courses registered yet.</p></div>
+    </div>
+
+    <div class="card log-card">
+      <div class="card-label">REGISTRATION LOG</div>
+      <div id="reg-log" class="log-box">
+        <div class="log-entry info">&bull; System ready. No courses registered.</div>
+      </div>
+    </div>
+  </main>
+
+  <footer>Lab Task 04 &mdash; Set &bull; No Duplicates &bull; .size &bull; for...of loop</footer>
+  <script src="Task4.js"></script>
+</body>
+</html>

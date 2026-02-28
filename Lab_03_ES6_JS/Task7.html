@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task7 - Student Data Using JSON</title>
+  <link rel="stylesheet" href="Task7.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="json-logo">{<span>}</span></div>
+      <div>
+        <h1>Student Data — JSON Handler</h1>
+        <p>JSON.stringify() &bull; JSON.parse() &bull; Destructuring &bull; forEach &bull; innerHTML</p>
+      </div>
+      <div class="badge">TASK 07</div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Controls -->
+    <div class="card">
+      <div class="btn-row">
+        <button class="btn-load"  onclick="loadDefaults()">Load 3 Default Students</button>
+        <button class="btn-parse" onclick="parseAndDisplay()">Parse + Display</button>
+        <button class="btn-clear" onclick="clearAll()">Clear All</button>
+      </div>
+    </div>
+
+    <!-- Add Custom -->
+    <div class="card">
+      <div class="card-label">ADD CUSTOM STUDENT OBJECT</div>
+      <div class="form-row">
+        <input type="text"   id="j-name"     placeholder="Name"/>
+        <input type="number" id="j-age"      placeholder="Age"/>
+        <input type="number" id="j-semester" placeholder="Semester"/>
+        <input type="text"   id="j-courses"  placeholder="Courses (comma-separated)"/>
+        <button class="btn-convert" onclick="addCustom()">Convert &amp; Add</button>
+      </div>
+    </div>
+
+    <!-- Pipeline -->
+    <div class="pipeline">
+      <!-- Step 1 -->
+      <div class="step-card">
+        <div class="step-num">01</div>
+        <div class="step-title">JSON.stringify()</div>
+        <div class="step-sub">Object &rarr; JSON string</div>
+        <div id="stringify-out" class="code-box">—</div>
+      </div>
+      <!-- Arrow -->
+      <div class="arrow">&#8595;</div>
+      <!-- Step 2 -->
+      <div class="step-card">
+        <div class="step-num">02</div>
+        <div class="step-title">JSON.parse()</div>
+        <div class="step-sub">JSON string &rarr; Object</div>
+        <div id="parse-out" class="code-box">—</div>
+      </div>
+      <!-- Arrow -->
+      <div class="arrow">&#8595;</div>
+      <!-- Step 3 -->
+      <div class="step-card">
+        <div class="step-num">03</div>
+        <div class="step-title">innerHTML Display</div>
+        <div class="step-sub">forEach loop + Destructuring &rarr; rendered cards</div>
+        <div id="display-cards"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer>Lab Task 07 &mdash; JSON.stringify() &bull; JSON.parse() &bull; Destructuring &bull; forEach &bull; innerHTML</footer>
+  <script src="Task7.js"></script>
+</body>
+</html>

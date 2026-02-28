@@ -1,0 +1,79 @@
+/* Task 4 — Clean Light / Bold Cards Theme */
+:root{
+  --bg:#f0f2f5;--white:#ffffff;--surface:#f8f9fb;
+  --border:#e2e5ea;--pink:#e91e8c;--blue:#0ea5e9;
+  --yellow:#f59e0b;--black:#1a1a2e;--muted:#94a3b8;
+  --green:#22c55e;--red:#ef4444;--text:#1e293b;
+  --font:'DM Sans',sans-serif;--mono:'DM Mono',monospace;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:100vh;overflow-x:hidden;}
+header{background:var(--black);padding:1.5rem 2.5rem;position:relative;overflow:hidden;}
+header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--pink),var(--blue),var(--yellow));}
+.header-inner{max-width:900px;margin:0 auto;display:flex;align-items:center;gap:1.25rem;}
+.set-badges{display:flex;gap:6px;}
+.sb{width:30px;height:30px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:.9rem;font-weight:700;}
+.sb.s{background:var(--pink);color:#fff;}
+.sb.e{background:var(--blue);color:#fff;}
+.sb.t{background:var(--yellow);color:#000;}
+header h1{font-family:var(--font);font-size:1.5rem;font-weight:700;color:#fff;}
+header p{font-size:.72rem;color:#64748b;margin-top:2px;}
+.badge{margin-left:auto;font-family:var(--mono);font-size:.8rem;border:1px solid #334155;padding:.35rem 1rem;border-radius:4px;color:#94a3b8;}
+main{max-width:900px;margin:0 auto;padding:2rem;}
+.card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:1.75rem;margin-bottom:1.25rem;box-shadow:0 1px 3px rgba(0,0,0,.06);}
+.card-label{font-family:var(--mono);font-size:.72rem;font-weight:500;letter-spacing:.12em;color:var(--muted);text-transform:uppercase;margin-bottom:1.1rem;}
+.card-label small{text-transform:none;letter-spacing:0;font-size:.68rem;}
+.input-row{display:flex;gap:.75rem;margin-bottom:1rem;}
+.input-row input{
+  flex:1;border:1.5px solid var(--border);border-radius:8px;
+  padding:.75rem 1rem;font-family:var(--font);font-size:.95rem;
+  color:var(--text);outline:none;transition:border-color .2s,box-shadow .2s;
+  background:var(--surface);
+}
+.input-row input:focus{border-color:var(--black);box-shadow:0 0 0 3px rgba(26,26,46,.08);}
+.input-row input::placeholder{color:var(--muted);}
+.btn-reg{
+  background:var(--black);color:#fff;border:none;border-radius:8px;
+  padding:.75rem 1.5rem;font-family:var(--font);font-size:.88rem;
+  font-weight:600;letter-spacing:.08em;cursor:pointer;transition:opacity .2s,transform .15s;
+  white-space:nowrap;
+}
+.btn-reg:hover{opacity:.85;transform:translateY(-1px);}
+.btn-row{display:flex;gap:.6rem;flex-wrap:wrap;}
+.btn-sm{
+  padding:.55rem 1.1rem;border-radius:7px;font-family:var(--font);
+  font-size:.78rem;font-weight:600;cursor:pointer;border:none;
+  transition:opacity .2s,transform .15s;
+}
+.btn-sm:hover{opacity:.85;transform:translateY(-1px);}
+.btn-blue  {background:var(--blue);  color:#fff;}
+.btn-yellow{background:var(--yellow);color:#000;}
+.btn-red   {background:var(--red);   color:#fff;}
+.stats-row{display:flex;gap:1rem;margin-bottom:1.25rem;flex-wrap:wrap;}
+.stat-card{
+  flex:1;min-width:140px;border-radius:14px;padding:1.5rem 1.25rem;
+  display:flex;align-items:center;gap:1rem;
+  box-shadow:0 4px 12px rgba(0,0,0,.1);
+}
+.stat-card.pink  {background:var(--pink);  color:#fff;}
+.stat-card.blue  {background:var(--blue);  color:#fff;}
+.stat-card.yellow{background:var(--yellow);color:#000;}
+.stat-num{font-family:var(--mono);font-size:2.8rem;font-weight:700;line-height:1;}
+.stat-lbl{font-size:.72rem;font-weight:600;letter-spacing:.08em;line-height:1.6;}
+.stat-lbl small{font-weight:400;opacity:.75;font-size:.66rem;}
+.courses-wrap{display:flex;flex-wrap:wrap;gap:.6rem;}
+.course-chip{
+  background:var(--bg);border:1.5px solid var(--border);
+  border-radius:7px;padding:.45rem 1rem;font-size:.85rem;font-weight:500;
+  animation:popIn .25s ease;
+}
+@keyframes popIn{from{transform:scale(.8);opacity:0;}to{transform:scale(1);opacity:1;}}
+.empty{color:var(--muted);font-size:.88rem;text-align:center;padding:1.25rem 0;font-style:italic;}
+.log-card{background:var(--black);border-color:#334155;}
+.log-card .card-label{color:#475569;}
+.log-box{max-height:120px;overflow-y:auto;}
+.log-entry{font-family:var(--mono);font-size:.75rem;padding:3px 0;}
+.log-entry.success{color:#4ade80;}
+.log-entry.error  {color:#f87171;}
+.log-entry.info   {color:#64748b;}
+footer{border-top:1px solid var(--border);text-align:center;padding:1.2rem;font-size:.78rem;color:var(--muted);font-style:italic;}

@@ -1,14 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Shopping Cart</title>
-    <link rel="stylesheet" href="Task 2.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task2 - Online Shopping Cart</title>
+  <link rel="stylesheet" href="Task2.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
 </head>
 <body>
+  <header>
+    <div class="header-inner">
+      <div class="logo">[CART_v2]</div>
+      <div class="header-text">
+        <h1>Online Shopping Cart</h1>
+        <p>Rest Operator &bull; Spread Operator &bull; Destructuring</p>
+      </div>
+      <div class="badge">TASK_02</div>
+    </div>
+  </header>
 
-<h2>Online Shopping Cart</h2>
-<div id="cart"></div>
+  <main>
+    <div class="row-label">// ADD_PRODUCT</div>
+    <div class="card">
+      <div class="add-row">
+        <input type="text"   id="p-name"  placeholder="product_name"/>
+        <input type="number" id="p-price" placeholder="price_usd" step="0.01"/>
+        <button class="btn-create" onclick="createProduct()">+ CREATE</button>
+      </div>
+    </div>
 
-<script src="Task 2.js"></script>
+    <div class="row-label">// OPERATIONS</div>
+    <div class="card">
+      <div class="ops-row">
+        <button class="btn-op op-green" onclick="addAllOp()">&#9654; addToCart(...rest)</button>
+        <button class="btn-op op-cyan"  onclick="spreadOp()">&#8853; Spread + Destructure</button>
+        <button class="btn-op op-red"   onclick="clearCart()">&#10005; CLEAR CART</button>
+      </div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat"><span id="totalItems">0</span><small>TOTAL_ITEMS</small></div>
+      <div class="stat"><span id="totalPrice">$0.00</span><small>TOTAL_PRICE</small></div>
+      <div class="stat"><span id="firstItem">—</span><small>FIRST_ITEM</small></div>
+      <div class="stat"><span id="remaining">—</span><small>REMAINING</small></div>
+    </div>
+
+    <div class="two-col">
+      <div>
+        <div class="row-label">// AVAILABLE_PRODUCTS{ }</div>
+        <div class="card" id="product-list"></div>
+      </div>
+      <div>
+        <div class="row-label">// CART_STATE{ }</div>
+        <div class="card" id="cart-list"><p class="empty">Cart is empty</p></div>
+      </div>
+    </div>
+
+    <div class="row-label">// CONSOLE_OUTPUT</div>
+    <div class="card console-card">
+      <div id="con" class="con-out">
+        <div class="clog">&gt; System initialized. Ready for operations.</div>
+      </div>
+    </div>
+  </main>
+
+  <footer>Lab Task 02 &mdash; Rest / Spread / Destructuring &mdash; JavaScript ES6</footer>
+  <script src="Task2.js"></script>
 </body>
 </html>

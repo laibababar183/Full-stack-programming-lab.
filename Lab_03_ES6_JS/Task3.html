@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task3 - Async Data Loader</title>
+  <link rel="stylesheet" href="Task3.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="pulse"></div>
+      <div>
+        <h1>Async Data Loader</h1>
+        <p>Promise &bull; setTimeout(3000ms) &bull; .then() &bull; .catch() &bull; Resolve &amp; Reject</p>
+      </div>
+      <div class="badge">TASK 03</div>
+    </div>
+  </header>
+
+  <main>
+    <div class="control-panel">
+      <div class="ctrl-label">MISSION CONTROL</div>
+      <div class="ctrl-row">
+        <label class="toggle-lbl">
+          <input type="checkbox" id="fail-toggle"/>
+          <span class="toggle-track"></span>
+          <span>Simulate Server Failure</span>
+        </label>
+        <button class="btn-fetch" id="fetch-btn" onclick="loadUsers()">
+          <span class="spin-icon">◉</span> FETCH USERS
+        </button>
+        <button class="btn-reset" onclick="resetAll()">RESET</button>
+      </div>
+    </div>
+
+    <div id="status-box" class="status-box hidden"></div>
+    <div id="user-grid" class="user-grid"></div>
+  </main>
+
+  <footer>Lab Task 03 &mdash; Promise &bull; setTimeout(3000ms) &bull; .then() &bull; .catch() &bull; Resolve &amp; Reject</footer>
+  <script src="Task3.js"></script>
+</body>
+</html>
