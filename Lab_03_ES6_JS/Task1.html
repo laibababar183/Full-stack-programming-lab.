@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task1 - Student Management System</title>
+  <link rel="stylesheet" href="Task1.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div class="bg-mesh"></div>
+
+  <header>
+    <div class="header-inner">
+      <div class="logo-box">
+        <span class="logo-icon">⬡</span>
+        <div>
+          <h1>Student Management System</h1>
+          <p>ES6 Class · Constructor · Template Literals · innerHTML</p>
+        </div>
+      </div>
+      <div class="badge">TASK 01</div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Enroll Form -->
+    <div class="panel">
+      <div class="panel-header">
+        <span class="dot"></span>
+        <span class="dot dot2"></span>
+        <span class="dot dot3"></span>
+        <span class="panel-title">Enroll New Student</span>
+      </div>
+      <div class="form-grid">
+        <div class="field">
+          <label>FULL NAME</label>
+          <input type="text" id="s-name" placeholder="e.g. Zara Ahmed"/>
+        </div>
+        <div class="field">
+          <label>SEMESTER</label>
+          <input type="number" id="s-sem" placeholder="1 – 8" min="1" max="8"/>
+        </div>
+        <div class="field field-full">
+          <label>COURSES <em>(comma separated)</em></label>
+          <input type="text" id="s-courses" placeholder="e.g. OOP, Web Dev, Databases"/>
+        </div>
+      </div>
+      <button class="btn-primary" onclick="addStudent()">+ Enroll Student</button>
+      <div id="msg" class="msg"></div>
+    </div>
+
+    <!-- Counter -->
+    <div class="counter-row">
+      <div class="counter-card">
+        <div class="counter-num" id="student-count">3</div>
+        <div class="counter-lbl">Total Students Enrolled</div>
+      </div>
+    </div>
+
+    <!-- Roster -->
+    <div class="roster-heading">
+      <div class="line"></div>
+      <span>Scholar Roster</span>
+      <div class="line"></div>
+    </div>
+
+    <div class="grid" id="students-grid"></div>
+  </main>
+
+  <footer>Lab Task 01 &mdash; ES6 Class &bull; Constructor &bull; Template Literals &bull; innerHTML</footer>
+
+  <script src="Task1.js"></script>
+</body>
+</html>
